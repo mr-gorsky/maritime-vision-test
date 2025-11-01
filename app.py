@@ -1519,26 +1519,26 @@ if results_data['tests_completed']:
         with col3:
             st.metric("Overall Accuracy", f"{overall_accuracy:.1f}%")
         
-	# Overall Assessment
-st.markdown("### OVERALL PROFESSIONAL ASSESSMENT")
+		# Overall Assessment
+		st.markdown("### OVERALL PROFESSIONAL ASSESSMENT")
 
-if passed_tests == total_tests:
-    overall_status = "FIT FOR MARITIME DUTIES"
-    overall_color = "#28a745"
-    recommendations = "✅ **Recommendations:**<br>- Suitable for all color-critical maritime duties<br>- No restrictions on navigation or lookout responsibilities<br>- Regular biennial color vision assessment recommended"
-elif passed_tests >= total_tests * 0.7:
-    overall_status = "CONDITIONALLY FIT" 
-    overall_color = "#ffc107"
-    recommendations = "⚠️ **Recommendations:**<br>- Suitable for most maritime duties with minor restrictions<br>- Additional training recommended for challenging light conditions<br>- Annual color vision assessment required<br>- Consult with maritime medical examiner for specific duty limitations"
-else:
-    overall_status = "FURTHER ASSESSMENT REQUIRED"
-    overall_color = "#dc3545"
-    recommendations = "❌ **Recommendations:**<br>- Comprehensive medical assessment by qualified professional required<br>- Significant restrictions on color-critical duties<br>- Not recommended for navigation or lookout responsibilities without further evaluation<br>- Consider alternative maritime positions with reduced color vision requirements"
+	if passed_tests == total_tests:
+    	overall_status = "FIT FOR MARITIME DUTIES"
+    	overall_color = "#28a745"
+    	recommendations = "✅ **Recommendations:**<br>- Suitable for all color-critical maritime duties<br>- No restrictions on navigation or lookout responsibilities<br>- Regular biennial color vision assessment recommended"
+	elif passed_tests >= total_tests * 0.7:
+    	overall_status = "CONDITIONALLY FIT" 
+    	overall_color = "#ffc107"
+    	recommendations = "⚠️ **Recommendations:**<br>- Suitable for most maritime duties with minor restrictions<br>- Additional training recommended for challenging light conditions<br>- Annual color vision assessment required<br>- Consult with maritime medical examiner for specific duty limitations"
+	else:
+    	overall_status = "FURTHER ASSESSMENT REQUIRED"
+    	overall_color = "#dc3545"
+    	recommendations = "❌ **Recommendations:**<br>- Comprehensive medical assessment by qualified professional required<br>- Significant restrictions on color-critical duties<br>- Not recommended for navigation or lookout responsibilities without further evaluation<br>- Consider alternative maritime positions with reduced color vision requirements"
 
-st.markdown(f"""
+		st.markdown(f"""
 <div style="background-color: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 6px solid {overall_color}; margin: 20px 0;">
-    <h3 style="color: {overall_color}; margin-top: 0;">{overall_status}</h3>
-    <div style="font-size: 14px; line-height: 1.6;">
+    	<h3 style="color: {overall_color}; margin-top: 0;">{overall_status}</h3>
+   		<div style="font-size: 14px; line-height: 1.6;">
         {recommendations}
     </div>
 </div>
@@ -1635,4 +1635,5 @@ def main():
         show_results()
 
 if __name__ == "__main__":
+
     main()
