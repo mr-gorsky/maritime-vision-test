@@ -1488,7 +1488,7 @@ def show_results():
         })
 
   	 # COMPREHENSIVE REPORT SECTION
-		if results_data['tests_completed']:
+	if results_data['tests_completed']:
     	st.markdown("---")
     
     # Comprehensive Report Header with Phantasma Logo (bijela verzija) - LOGO DESNO
@@ -1637,4 +1637,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
