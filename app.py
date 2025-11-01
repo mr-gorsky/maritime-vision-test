@@ -1487,22 +1487,22 @@ def show_results():
             'assessment': radar_interpretation
         })
 
-   # COMPREHENSIVE REPORT SECTION
-if results_data['tests_completed']:
-    st.markdown("---")
+  	 # COMPREHENSIVE REPORT SECTION
+		if results_data['tests_completed']:
+    	st.markdown("---")
     
     # Comprehensive Report Header with Phantasma Logo (bijela verzija) - LOGO DESNO
-    st.markdown("""
-    <div class="comprehensive-header">
+    	st.markdown("""
+   	 	<div class="comprehensive-header">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
             <div>
                 <h1 style="margin: 0; color: white; font-size: 2.2rem; font-weight: 700;">COMPREHENSIVE ASSESSMENT REPORT</h1>
                 <p style="margin: 0; color: #e5e7eb; font-size: 1.1rem;">Professional Color Vision Evaluation</p>
             </div>
             <img src="https://i.postimg.cc/d0M3jhVj/phantasma-white.png" width="225">
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+       	 </div>
+  	 	 </div>
+   		 """, unsafe_allow_html=True)
         
         # Overall Summary
         passed_tests = sum(1 for test in results_data['tests_completed'] if test['status'] == 'PASS')
@@ -1637,3 +1637,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
